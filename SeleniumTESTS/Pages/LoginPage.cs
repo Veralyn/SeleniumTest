@@ -8,27 +8,22 @@ namespace SeleniumTESTS.Pages
 {
     public class LoginPage
     {
-        private Iwebdriver webdriver;
 
-        public LoginPage(Iwebdriver driver)
+        public LoginPage()
         {
-            Driver = webdriver;
+           
         }
 
-        private Iwebdriver Driver { get;  }
 
-        //IWebElement txtEmail = driver.FindElement(By.Id("txtEmail"));
-        //IWebElement txtPassword = driver.FindElement(By.Id("txtPassword"));
-       
-        //public void Login(string txtEmail, string txtPassword)
-        //{
-         
+        public void Login(IWebDriver driver, string txtEmail, string txtPassword)
+        {
 
-        //    driver.FindElement(By.Id("txtEmail")).SendKeys(txtEmail);
-        //    driver.FindElement(By.Id("txtPassword")).SendKeys(txtPassword);
-        //    driver.FindElement(By.Id("btnlogin")).Submit();
 
-        //}
+            driver.FindElement(By.Id("txtEmail")).SendKeys(txtEmail);
+            driver.FindElement(By.Id("txtPassword")).SendKeys(txtPassword);
+            driver.FindElement(By.Id("btnlogin")).Submit();
+
+        }
     }
 
    
